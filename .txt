@@ -177,3 +177,30 @@ int mdc(int a, int b) {
     return mdc(b, a % b);
 }
 
+
+10 - 
+#include <stdio.h>
+
+int multiplicar(int a, int b) {
+    if (b == 0) return 0;
+    return a + multiplicar(a, b - 1);
+}
+
+
+11 - 
+#include <stdio.h>
+
+int contarChar(char *str, char c) {
+    if (*str == '\0') return 0;
+    return (*str == c) + contarChar(str + 1, c);
+}
+
+
+12 - 
+#include <stdio.h>
+
+int somaArray(int arr[], int n) {
+    if (n == 0) return 0;
+    return arr[n-1] + somaArray(arr, n-1);
+}
+
